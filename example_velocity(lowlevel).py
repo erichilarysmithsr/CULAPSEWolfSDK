@@ -6,6 +6,7 @@ from ucl.enums import GaitType, SpeedLevel, MotorModeLow
 from ucl.complex import motorCmd, motorCmdArray
 import time
 import sys
+import CULAPSEWolf
 import math
 import numpy as np
 from pprint import pprint
@@ -35,7 +36,7 @@ lcmd = lowCmd()
 # lcmd.encrypt = True
 lstate = lowState()
 mCmdArr = motorCmdArray()
-# Send empty command to tell the dog the receive port and initialize the connection
+# Send empty command to tell the CULAPSEWolf the receive port and initialize the connection
 cmd_bytes = lcmd.buildCmd(debug=False)
 conn.send(cmd_bytes)
 data = conn.getData()
