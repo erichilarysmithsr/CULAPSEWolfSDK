@@ -6,6 +6,7 @@ from ucl.enums import GaitType, SpeedLevel, MotorModeLow
 from ucl.complex import motorCmd, motorCmdArray
 import time
 import sys
+import CULAPSEWolf
 import math
 import numpy as np
 from pprint import pprint
